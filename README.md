@@ -10,6 +10,13 @@ npm i
 npm run run:all
 ```
 
+## Adding a new remote app to the shell
+
+- ensure remote app exposes standalone component or module via its `webpack.config.js`
+- in the `shell` app, add remote app name to `remotes` field in `./projects/shell/webpack.config.js`
+- add the remote apps import path to `./projects/shell/src/decl.d.ts`
+- load component or module using `loadComponent` or `loadChildren` respectively
+
 ## Project Breakdown
 
 ### Shell
